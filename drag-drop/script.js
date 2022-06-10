@@ -50,19 +50,10 @@ images.forEach((image) => {
   let leftTouch;
   let topTouch;
   let sourceUrl;
-  let startTopDisplay;
-  let startLeftDisplay;
-  let endTopDisplay;
-  let endLeftDisplay;
   image.addEventListener("touchmove", (e) => {
     // get position of cursor
     leftTouch = e.targetTouches[0].pageX;
     topTouch = e.targetTouches[0].pageY;
-    // get limits of div display image
-    startTopDisplay = display.offsetTop;
-    startLeftDisplay = display.offsetLeft;
-    endTopDisplay = display.offsetHeight + startTopDisplay;
-    endLeftDisplay = display.offsetWidth + startLeftDisplay;
     // opacity 0.2 on dragstart
     image.style.opacity = "0.3";
     // get url source of image
@@ -77,6 +68,11 @@ images.forEach((image) => {
   image.addEventListener("touchend", () => {
     // opacity 1 on dragend
     image.style.opacity = "1";
+    // get limits of div display image
+    let startTopDisplay = display.offsetTop;
+    let startLeftDisplay = display.offsetLeft;
+    let endTopDisplay = display.offsetHeight + startTopDisplay;
+    let endLeftDisplay = display.offsetWidth + startLeftDisplay;
     // check if into the bloc display image to drop image
     if (
       leftTouch >= startLeftDisplay &&
