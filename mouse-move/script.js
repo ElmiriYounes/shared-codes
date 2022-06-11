@@ -11,6 +11,7 @@ let starAnimate = document.querySelector(".fa-star");
     movemouse.style.top = top + "px";
     movemouse.style.left = left + "px";
     movemouse.style.transition = "none";
+    movemouse.style.transition = "all 0.05s ease-out";
     starAnimate.classList.add("opacity");
   });
 
@@ -18,7 +19,7 @@ let starAnimate = document.querySelector(".fa-star");
     // e.target.animate([{},{}],{duration: 1000})
     movemouse.style.top = "50%";
     movemouse.style.left = "50%";
-    movemouse.style.transition = "all 0.3s ease-out";
+    movemouse.style.transition = "all 0.05s ease-out";
     starAnimate.classList.remove("opacity");
   });
 })();
@@ -33,7 +34,7 @@ let starAnimate = document.querySelector(".fa-star");
 
     movemouse.style.top = startY + "px";
     movemouse.style.left = startX + "px";
-    movemouse.style.transition = "all 0.05s ease-out";
+    movemouse.style.transition = "all 0.3s ease-out";
     starAnimate.classList.add("opacity");
 
     // equivalent of mouseleave
