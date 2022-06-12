@@ -17,7 +17,6 @@ display.querySelector('img').draggable = false;
       // store source url of image (=> image.getAttribute("src")) on a data variable named "sourceUrl" for example
       event.dataTransfer.setData("sourceUrl", image.getAttribute("src"));
     });
-
     // dragend = end of drag
     image.addEventListener("dragend", () => {
       // opacity 1 on dragend
